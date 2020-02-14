@@ -1,0 +1,5 @@
+package lv.gundega.paysystem;
+
+public class PaymentSystem {
+
+}
