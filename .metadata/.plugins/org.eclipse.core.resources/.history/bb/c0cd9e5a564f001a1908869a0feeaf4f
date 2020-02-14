@@ -1,0 +1,39 @@
+package lv.gundega.employee;
+
+import lv.gundega.paysystem.Payee;
+
+public class SalaryEmployee implements Payee {
+	
+	
+	private String name;
+	private Integer bankAccount;
+	protected Double grossWage;
+	
+	public SalaryEmployee(String name, Integer bankAccount, Double grossWage) {
+		this.name = name;
+		this.bankAccount = bankAccount;
+		this.grossWage = grossWage;
+	}
+
+	@Override
+	public String name() {
+		
+		return null;
+	}
+
+	@Override
+	public Double grossPayment() {
+		
+		return null;
+	}
+
+	@Override
+	public Integer bankAccount() {
+		
+		return null;
+	}
+
+	
+	
+	
+}
