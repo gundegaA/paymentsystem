@@ -1,0 +1,7 @@
+package lv.gundega.employee;
+
+import lv.gundega.paysystem.Payee;
+
+public class SalaryEmployee implements Payee {
+
+}
