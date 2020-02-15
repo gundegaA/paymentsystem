@@ -1,0 +1,36 @@
+package lv.gundega.employee;
+
+import lv.gundega.paysystem.Payee;
+
+public class CommissionEmployee extends Employee{ 
+	
+	
+	private Double grossComission = 0.0;
+	
+	public CommissionEmployee(String name, Integer bankAccount, Double grossWage) {
+		super(name,bankAccount,grossWage);
+		
+	}
+
+
+	@Override
+	public Double grossPayment() {
+		
+		return grossWage + doCurrentComission();
+	}
+
+	
+	private Double doCurrentComission() {
+		Double commission = grossComission;
+		grossComission = 0.0;
+		return commission;
+	}
+
+		//metode,kura pieskir komisiju
+	public void giveCommission(Double amount){
+		grossComission +=amount;
+		
+		//garaks pieraksts
+		//grossComission =grossComission+amount;
+	}
+}

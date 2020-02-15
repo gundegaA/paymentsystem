@@ -1,5 +1,0 @@
-package lv.gundega.paysystem;
-
-public interface Payee {
-
-}

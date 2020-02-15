@@ -1,0 +1,32 @@
+package lv.gundega.employee;
+
+
+public class SalaryEmployee extends Employee {
+	
+	
+	
+	
+	public SalaryEmployee(String name, Integer bankAccount, Double grossWage) {
+		super(name, bankAccount, grossWage);
+	}
+
+
+	@Override
+	public Double grossPayment() {
+		
+		return grossWage;
+	}
+
+
+	@Override
+	public void giveBonus(double percentage) {
+		
+		
+	}
+
+
+
+	
+	
+	
+}

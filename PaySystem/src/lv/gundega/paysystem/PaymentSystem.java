@@ -1,16 +1,22 @@
 package lv.gundega.paysystem;
 
+import java.text.DecimalFormat;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PaymentSystem {
 	
+	 private static DecimalFormat df2 = new DecimalFormat("#.##");
+	 
+	
 	//izmantojam interface,kas ir abstrakta klase
-	private List <Payee> payees;
+	public List <Payee> payees;
 	
 	public PaymentSystem(){
 		payees = new ArrayList<>();	
 	}
+	
 	
 	public void addPayee(Payee payee){
 		if(!payees.contains(payee)){
@@ -22,8 +28,17 @@ public class PaymentSystem {
 			Double grossPayment = payee.grossPayment();
 			
 			System.out.println("Paying to "+ payee.name());
-			System.out.println("Grosst "+grossPayment);
+			df2.setRoundingMode(RoundingMode.UP);
+			System.out.println("Grosst "+df2.format(grossPayment));
 			System.out.println("Transfered to Account: "+payee.bankAccount() );
 		}
 	}
+
+	public void printNames(){
+		for(Payee payee : payees){
+			System.out.print(payee.name()+"  ");
+			
+		}
+	}
+	
 }
